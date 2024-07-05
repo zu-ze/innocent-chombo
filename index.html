@@ -35,8 +35,14 @@
         }
 
         .logo {
-            font-size: 16px;
+            font-size: 2rem;
             font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
         }
 
         nav ul {
@@ -101,7 +107,9 @@
 
         .hero-image img {
             max-width: 100%;
-            height: auto;
+            height: 400px;
+            width: 600px;
+            object-fit: cover;
         }
 
         .quote {
@@ -154,6 +162,13 @@
             flex: 1;
             text-align: right;
             position: relative;
+        }
+
+        .about-image img {
+            max-width: 100%;
+            height: 400px;
+            width: 600px;
+            object-fit: cover;
         }
 
         .about-image::before {
@@ -210,57 +225,66 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .section {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .section.visible {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">&lt;Innocent /&gt;</div>
             <nav>
+                <div class="logo">&lt;Innocent /&gt;</div>
                 <ul>
-                    <li><a href="#home">#home</a></li>
+                    <!-- <li><a href="#home">#home</a></li>
                     <li><a href="#works">#works</a></li>
                     <li><a href="#about">#about-me</a></li>
                     <li><a href="#contacts">#contacts</a></li>
-                    <li><a href="#">EN</a></li>
+                    <li><a href="#">EN</a></li> -->
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <section id="home" class="hero">
+        <section id="home" class="hero section">
             <div class="hero-content">
-                <h1>Innocent E. Chombo is a <span style="color: var(--accent-color);">Full Stack Developer</span> and <span style="color: var(--accent-color);">ICT Teacher</span></h1>
+                <h1>Innocent E. Chombo is a <span style="color: var(--accent-color);">Full Stack Developer</span></h1>
                 <p>He crafts responsive web applications and teaches digital literacy</p>
                 <a href="#contacts" class="btn">Contact me !!</a>
-                <p>Currently working on <span style="color: var(--accent-color);">Akometsi Media backend API</span></p>
+                <p>Currently working on <span style="color: var(--accent-color);">SaaS Projects</span></p>
             </div>
             <div class="hero-image">
-                <img src="/api/placeholder/400/400" alt="Innocent working on a computer">
+                <img src="/images/20220813_123616.jpg" alt="Innocent working on a computer">
             </div>
         </section>
 
-        <section class="quote">
+        <section class="quote section">
             <blockquote>
                 "Learning never exhausts the mind."
                 <footer>- Leonardo da Vinci</footer>
             </blockquote>
         </section>
 
-        <section id="works">
+        <section id="works" class="section">
             <h2 class="section-title">projects</h2>
             <div class="projects">
                 <div class="project-card">
                     <img src="/api/placeholder/300/200" alt="Akometsi Media Backend">
-                    <h3>Akometsi Media Backend</h3>
-                    <p>Building backend API for media platform</p>
+                    <h3>Akometsi Music</h3>
+                    <p>Building backend API for music platform</p>
                     <p>PHP Laravel MySQL</p>
                     <a href="#" class="btn">Details &lt;~&gt;</a>
                 </div>
                 <div class="project-card">
                     <img src="/api/placeholder/300/200" alt="SubSpace Full Stack Project">
-                    <h3>SubSpace Web Application</h3>
+                    <h3>SubSpace</h3>
                     <p>Full stack development for SubSpace</p>
                     <p>PHP Laravel MySQL NextJs</p>
                     <a href="#" class="btn">Details &lt;~&gt;</a>
@@ -275,7 +299,7 @@
             </div>
         </section>
 
-        <section class="skills">
+        <section class="skills section">
             <h2 class="section-title">skills</h2>
             <div class="skill-category">
                 <h3>Programming Languages</h3>
@@ -303,28 +327,28 @@
             </div>
         </section>
 
-        <section id="about" class="about-me">
+        <section id="about" class="about-me section">
             <div class="about-content">
                 <h2 class="section-title">about-me</h2>
                 <p>Hello, I'm Innocent!</p>
-                <p>I'm a Full Stack Developer and ICT Teacher based in Malawi. With a BSc in Information and Communication Technology from Mzuzu University, I specialize in developing responsive web applications and teaching digital literacy.</p>
+                <p>I'm a Full Stack Developer based in Malawi. With a BSc in Information and Communication Technology from Mzuzu University, I specialize in developing responsive web applications.</p>
                 <p>My experience spans from building backend APIs to designing intuitive front-end interfaces. I'm passionate about learning new technologies and frameworks, and I enjoy applying my skills to solve complex problems in the tech industry.</p>
                 <a href="#" class="btn">Read more -></a>
             </div>
             <div class="about-image">
-                <img src="/api/placeholder/400/400" alt="Innocent teaching a class">
+                <img src="/images/20220813_123654.jpg" alt="Innocent teaching a class">
             </div>
         </section>
 
-        <section id="contacts" class="contacts">
+        <section id="contacts" class="contacts section">
             <h2 class="section-title">contacts</h2>
-            <p>I'm open to new opportunities in full stack development and ICT education. If you have any questions or would like to discuss a potential project, please don't hesitate to reach out.</p>
+            <p>I'm open to new opportunities in full stack development. If you have any questions or would like to discuss a potential project, please don't hesitate to reach out.</p>
             <div>
                 <h3>Contact me here</h3>
                 <p>
                     <img src="/api/placeholder/20/20" alt="Email icon"> Email: innocentchombo@gmail.com<br>
                     <img src="/api/placeholder/20/20" alt="LinkedIn icon"> LinkedIn: linkedin.com/in/innochombo<br>
-                    <img src="/api/placeholder/20/20" alt="Phone icon"> Phone: +265 888 74 87 58
+                    <img src="/api/placeholder/20/20" alt="Phone icon"> Phone: +265 888 74 87 58/+265 995 38 89 94
                 </p>
             </div>
         </section>
@@ -339,5 +363,27 @@
             </div>
         </div>
     </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('.section');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                } else {
+                    entry.target.classList.remove('visible');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+    });
+    </script>
 </body>
 </html>
